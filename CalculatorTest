@@ -71,4 +71,9 @@ public class CalculatorTest
              assertEquals("Negatives not allowed: -1, -2", ex.getMessage());
         }
     }
+    @Test
+    public void shouldAcceptSpace()
+    {
+        assertEquals(6, Calculator.add(" 1 ,2 ,\n3"));
+    }
 }
