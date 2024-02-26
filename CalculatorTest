@@ -1,0 +1,15 @@
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
+
+import org.junit.Test;
+
+import com.calculator.github.Calculator;
+
+public class CalculatorTest
+{
+    @Test
+    public void shouldReturnZeroOnEmptyString()
+    {
+        assertEquals(0, Calculator.add(""));
+    }
+}
