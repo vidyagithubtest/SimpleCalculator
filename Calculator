@@ -8,6 +8,6 @@ public class Calculator
     {
         if (text.isEmpty())
         {
-            return -1;
+            return 0;
         }
 }
