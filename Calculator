@@ -41,8 +41,8 @@ public class Calculator
     private static String[] tokenize(String text)
     { 
        String[] tokens = null;
-        if(text.contains(",")) {
-          tokens= text.split(",");
+        if(text.contains(",") || text.contains("\n") {
+          tokens= text.replaceAll("\n", "").replaceAll("\r", "").split(",|\r\n");
        }
        return tokens;
     }
