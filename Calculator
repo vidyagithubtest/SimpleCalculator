@@ -46,4 +46,9 @@ public class Calculator
        }
        return tokens;
     }
+
+   private static int toInt(String text) throws NumberFormatException
+    {
+        return Integer.parseInt(text);
+    }
 }
