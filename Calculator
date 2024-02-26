@@ -1,0 +1,13 @@
+public class Calculator
+{
+  /**
+     * This function accepts input string, converts to integer and perform add operation
+     * @text -Input variable to transform into integers and perform add operation
+     */
+    public static int add(String text)
+    {
+        if (text.isEmpty())
+        {
+            return -1;
+        }
+}
