@@ -24,4 +24,26 @@ public class Calculator
             List<Integer> numbers = convert(tokens, toInt());
            return sum(numbers).intValue();
         }
+
+        private static Converter<String, Integer> toInt()
+        {
+        return new Converter<String, Integer>()
+        {
+
+            public Integer convert(String from)
+            {
+                return toInt(from);
+            }
+        };
+
+        }
+
+    private static String[] tokenize(String text)
+    { 
+       String[] tokens = null;
+        if(text.contains(",")) {
+          tokens= text.split(",");
+       }
+       return tokens;
+    }
 }
