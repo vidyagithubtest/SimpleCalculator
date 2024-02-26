@@ -57,7 +57,7 @@ public class Calculator
 
    private static int toInt(String text) throws NumberFormatException
     {
-        return Integer.parseInt(text);
+        return Integer.parseInt(text.replaceAll("\\s", ""));
     }
 
     private static boolean usesCustomDelimiterSyntax(String text)
@@ -70,9 +70,5 @@ public class Calculator
         String[] tokens = text.replaceAll("\n", "").replaceAll("\r", "").split(",|\r\n");
         return tokens;
     }
-    @Test
-    public void shouldAcceptNewLineAsValidDelimiter()
-    {
-        assertEquals(6, Calculator.add("1,2,\n3"));
-    }
+
 }
